@@ -57,7 +57,7 @@ prononce LE MOT FRANÇAIS. Tous ces cas ont été constatés en production :
 
 **Aucune règle de graphie ne gagne contre ça** tant que le mot reste
 reconnaissable. La parade : remplacer ces mots par des NON-MOTS français
-portant les mêmes sons (« Bibe », « Bonn-dyé », « iss-toua », « Jé-zi »).
+portant les mêmes sons (« Bibe », « Bon-dyé », « iss-toua », « Jé-zi »).
 Le moteur n'a plus rien à normaliser et lit ce qui est écrit. Le tiret
 aide : il casse la reconnaissance lexicale et se lit de façon fluide.
 
@@ -137,7 +137,7 @@ Dictionnaire constaté en production (à étendre au fil des signalements) :
 ```ts
 const WORD_OVERRIDES: Record<string, string> = {
   bib: 'bibe',          labib: 'la-bibe',
-  bondye: 'bonn-dyé',
+  bondye: 'bon-dyé',
   istwa: 'iss-toua',    listwa: 'liss-toua',
   kreyatè: 'kré-ya-tè', kreyate: 'kré-ya-té',
   gade: 'ga-dé',
@@ -186,7 +186,7 @@ s'entend pas.
    c'est un mot français qui se prononce exactement comme le créole.
 4. Si le mot reste trop proche d'un lemme français (noms propres surtout :
    Jezi/Jésus), le découper avec des tirets aux frontières de syllabes :
-   « Jé-zi », « Bonn-dyé », « iss-toua ». Le tiret casse la reconnaissance
+   « Jé-zi », « Bon-dyé », « iss-toua ». Le tiret casse la reconnaissance
    sans hacher la lecture.
 5. Tester à l'oreille (voir protocole plus bas).
 

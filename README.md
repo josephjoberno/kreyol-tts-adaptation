@@ -18,7 +18,7 @@ Chaque mot mal prononcé casse l'immersion d'une narration et décrédibilise la
 
 **Des règles de réécriture phonétique** : le texte est réécrit, juste avant l'appel au moteur, dans une orthographe que le français lit comme du kreyòl. Le « e » devient « é », le « en » nasal devient « in », le « g » se durcit en « gu » devant e/i, le « s » intervocalique se double. Six règles, dont l'ordre compte, dérivées de la table graphème-phonème officielle de l'orthographe IPN.
 
-**Un dictionnaire d'exceptions** : les mots que les moteurs LLM francisent sont remplacés par des non-mots français portant les mêmes sons. « Bib » devient « Bibe », « Bondye » devient « Bonn-dyé », « istwa » devient « iss-toua », « Jezi » devient « Jé-zi ». Le moteur n'a plus rien à normaliser et lit ce qui est écrit. Le tiret casse la reconnaissance lexicale sans hacher la lecture.
+**Un dictionnaire d'exceptions** : les mots que les moteurs LLM francisent sont remplacés par des non-mots français portant les mêmes sons. « Bib » devient « Bibe », « Bondye » devient « Bon-dyé », « istwa » devient « iss-toua », « Jezi » devient « Jé-zi ». Le moteur n'a plus rien à normaliser et lit ce qui est écrit. Le tiret casse la reconnaissance lexicale sans hacher la lecture.
 
 Règle d'or : le texte adapté ne sert QUE pour l'appel au moteur. Les sous-titres, le script affiché à l'utilisateur, la base de données gardent toujours l'orthographe IPN authentique.
 
@@ -70,10 +70,10 @@ Exemple de sortie :
 Texte original          : Bondye renmen nou, Jezi ap gade istwa nou.
 Détecté créole          : true
 
-Gemini TTS              : Bonn-dyé rinmin nou, Jé-zi ap ga-dé iss-toua nou.
-ElevenLabs              : Bonn-dyé rinmin nou, Jé-zi ap ga-dé iss-toua nou.
-fal.ai (voix)           : Bonn-dyé rinmin nou, Jé-zi ap ga-dé iss-toua nou.
-Suno (paroles chantées) : Bonn-dyé rinmin nou, Jé-zi ap ga-dé iss-toua nou.
+Gemini TTS              : Bon-dyé rinmin nou, Jé-zi ap ga-dé iss-toua nou.
+ElevenLabs              : Bon-dyé rinmin nou, Jé-zi ap ga-dé iss-toua nou.
+fal.ai (voix)           : Bon-dyé rinmin nou, Jé-zi ap ga-dé iss-toua nou.
+Suno (paroles chantées) : Bon-dyé rinmin nou, Jé-zi ap ga-dé iss-toua nou.
 Sous-titres / affichage : Bondye renmen nou, Jezi ap gade istwa nou.
 ```
 
@@ -90,7 +90,7 @@ Toutes les voix parlées et les paroles chantées (Suno en mode chanson) reçoiv
 | Bib | Bible | Bibe | bib |
 | istwa | histoire | iss-toua | iss-twa |
 | Jezi | Jésus | Jé-zi | jé-zi |
-| Bondye | Bon Dieu | Bonn-dyé | bon-dyé |
+| Bondye | Bon Dieu | Bon-dyé | bon-dyé |
 
 ## Contribuer
 

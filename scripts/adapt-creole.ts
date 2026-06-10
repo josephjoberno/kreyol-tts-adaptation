@@ -46,7 +46,7 @@ export function looksLikeHaitianCreole(text: string): boolean {
 const WORD_OVERRIDES: Record<string, string> = {
   bib: 'bibe',
   labib: 'la-bibe',
-  bondye: 'bonn-dyé',
+  bondye: 'bon-dyé',
   istwa: 'iss-toua',
   listwa: 'liss-toua',
   kreyatè: 'kré-ya-tè',
