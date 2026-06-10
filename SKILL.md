@@ -145,8 +145,36 @@ const WORD_OVERRIDES: Record<string, string> = {
   jezi: 'jé-zi',
   lapriyè: 'la-pri-yè', lapriye: 'la-pri-yé',
   priyè: 'pri-yè',      priye: 'pri-yé',
+  lidè: 'li-dè',        // disait « leader »
+  premye: 'pré-myé',    // disait « premier »
+  kanpe: 'kan-pé',      // disait « kanpeu »
+  revolisyon: 'ré-vo-li-syon', // disait « révolution »
+  kontinye: 'kon-ti-nyé',      // disait « continuer »
 };
 ```
+
+### Les classes de mots à risque (pour patcher PRÉVENTIVEMENT)
+
+Les signalements suivent des patrons prévisibles. Quand un mot d'une de ces
+classes apparaît dans un script, vérifiez-le avant l'utilisateur :
+
+1. **r supprimé** : le créole écrit « w » ou rien là où le français a un r
+   (pwoblèm/problème, libète/liberté, koulè/couleur, pawòl/parole,
+   glwa/gloire, pati/partir). Le LLM restaure le mot français AVEC le r.
+2. **u français [y] devenu i créole** (mizik/musique, jistis/justice,
+   minit/minute, kilti/culture, plis/plus) : le LLM remet le [y].
+3. **Verbes en -e proches d'un infinitif en -er** (gade/garder,
+   mache/marcher, rete/rester, kanpe/camper, kontinye/continuer).
+4. **Noms propres et lexique religieux** (Jezi, Bondye, Bib, levanjil,
+   pastè) : les plus fortement normalisés.
+5. **Mots courts devenant un mot français à la sortie des règles** :
+   « pòt » devient « pot » (lu [po]) via la règle ò vers o ; forcer « potte ».
+
+Les entrées préventives de ces classes sont déjà dans le dictionnaire du
+code et du CLI. Cas inoffensifs à NE PAS ajouter : quand le mot français
+cousin se prononce pareil (kite/quitter, ede/aider, montre/montré,
+chante/chanté, vwayaj/voyage, liberasyon/libération), la normalisation ne
+s'entend pas.
 
 ### Comment forger une bonne valeur de remplacement
 

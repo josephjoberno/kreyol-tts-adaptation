@@ -59,6 +59,41 @@ const WORD_OVERRIDES: Record<string, string> = {
   lapriye: 'la-pri-yé',
   priyè: 'pri-yè',
   priye: 'pri-yé',
+  // Reported 2026-06-10: lidè -> "leader", premye -> "premier",
+  // kanpe -> "kanpeu", revolisyon -> "révolution".
+  lidè: 'li-dè',
+  premye: 'pré-myé',
+  kanpe: 'kan-pé',
+  revolisyon: 'ré-vo-li-syon',
+  kontinye: 'kon-ti-nyé', // disait « continuer »
+  // Préventif, mêmes classes que les signalements.
+  // Classe r supprimé (le créole écrit w ou rien là où le français a un r) :
+  libète: 'li-bè-té',     // risque « liberté »
+  pati: 'pa-ti',          // risque « parti(r) »
+  pwoblèm: 'pwo-blèm',    // risque « problème »
+  pwofesè: 'pwo-fé-sè',   // risque « professeur »
+  pwogram: 'pwo-gram',    // risque « programme »
+  pwojè: 'pwo-jè',        // risque « projet »
+  pwomès: 'pwo-mèss',     // risque « promesse »
+  koulè: 'kou-lè',        // risque « couleur »
+  pawòl: 'pa-wol',        // risque « parole »
+  glwa: 'gloua',          // risque « gloire »
+  pastè: 'pas-tè',        // risque « pasteur »
+  mirak: 'mi-rak',        // risque « miracle »
+  // Classe u français [y] -> i créole :
+  jistis: 'jiss-tiss',    // risque « justice »
+  mizik: 'mi-zik',        // risque « musique »
+  minit: 'mi-nit',        // risque « minute »
+  kilti: 'kil-ti',        // risque « culture »
+  natir: 'na-tir',        // risque « nature »
+  plis: 'pliss',          // risque « plus »
+  // Classe verbes en -e proches d'un infinitif français :
+  mache: 'ma-ché',        // risque « marcher »
+  rete: 'ré-té',          // risque « rester »
+  pèdi: 'pè-di',          // risque « perdu »
+  levanjil: 'lé-van-jil', // risque « évangile »
+  // « pòt » deviendrait « pot » (lu [po] en français) via la règle ò -> o :
+  pòt: 'potte',
 };
 
 // ---------------------------------------------------------------------------
