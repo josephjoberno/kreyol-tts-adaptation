@@ -150,6 +150,11 @@ const WORD_OVERRIDES: Record<string, string> = {
   kanpe: 'kan-pé',      // disait « kanpeu »
   revolisyon: 'ré-vo-li-syon', // disait « révolution »
   kontinye: 'kon-ti-nyé',      // disait « continuer »
+  // ... plus les classes préventives (r supprimé, u->i, verbes en -e) et la
+  // troisième vague signalée (enfliyanse, pèp, sou, reyini, mizilman, pataje,
+  // jidayis, fanmi, sensè, enpòtans, lanmou, cheche, sèvis, ini, plizyè,
+  // valè, viv, komen). Liste complète et à jour dans scripts/adapt-creole.ts
+  // et creole-tts.service.ts.
 };
 ```
 

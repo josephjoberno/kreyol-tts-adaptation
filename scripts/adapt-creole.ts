@@ -94,6 +94,31 @@ const WORD_OVERRIDES: Record<string, string> = {
   levanjil: 'lé-van-jil', // risque « évangile »
   // « pòt » deviendrait « pot » (lu [po] en français) via la règle ò -> o :
   pòt: 'potte',
+  // Troisième vague signalée 2026-06-10 (le moteur disait le mot français) :
+  enfliyanse: 'in-fli-yan-sé', // « influencer »
+  pèp: 'pèpe',                 // « peuple » (le e final muet garde [pèp])
+  sou: 'soue',                 // « sur » (« soue » se lit [sou])
+  reyini: 'ré-yi-ni',          // « réuni »
+  mizilman: 'mi-zil-man',      // « musulman »
+  pataje: 'pa-ta-jé',          // « partager »
+  jidayis: 'ji-da-yiss',       // « judaïste »
+  fanmi: 'fan-mi',             // « famille »
+  sensè: 'sin-sè',             // « sincère »
+  sense: 'sin-sé',
+  enpòtans: 'in-pò-tans',      // « importance »
+  enpotans: 'in-pò-tans',
+  lanmou: 'lan-mou',           // « l'amour »
+  cheche: 'ché-ché',           // « chercher »
+  chache: 'cha-ché',
+  sèvis: 'sè-viss',            // « service »
+  sevis: 'sé-viss',
+  ini: 'i-ni',                 // « uni »
+  plizyè: 'pli-zyè',           // « plusieurs »
+  plizye: 'pli-zyé',
+  valè: 'va-lè',               // « valeur »
+  vale: 'va-lé',
+  viv: 'vive',                 // « vivre » (« vive » se prononce [viv])
+  komen: 'ko-min',             // « commun »
 };
 
 // ---------------------------------------------------------------------------
